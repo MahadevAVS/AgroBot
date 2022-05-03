@@ -91,7 +91,7 @@ pinMode(13,OUTPUT);
 pinMode(12,OUTPUT);
 pinMode(11,OUTPUT); 
 pinMode(10,OUTPUT); 
-pinMode(AO,INPUT); 
+pinMode(A0,INPUT); 
 pinMode(9,OUTPUT); 
 pinMode(8,OUTPUT); 
 pinMode(7,OUTPUT);
@@ -103,7 +103,7 @@ Serial.write("begin");
 
 void loop()
 {
-int sensorValue-analogRead(A0);
+int sensorValue=analogRead(A0);
 
 if (sensorValue>500)
 {
@@ -117,7 +117,7 @@ Serial.print("PUMP ON\n");
 
 else
 
-(
+{
 
 digitalWrite(9,LOW);
 
@@ -136,7 +136,7 @@ char Data = Serial.read();
 if(Data == 'F')
 {
 
-Serial.print("FORWARD"):
+Serial.print("FORWARD");
 
 Stop();
 
@@ -163,7 +163,7 @@ Stop();
 
 delay(10);
 
-Moveteft();
+MoveLeft();
 
 Serial.print("LEFT\n");
 }
@@ -187,7 +187,7 @@ else if(Data == 'B')
 
 Stop();
 
-delay(10):
+delay(10);
 
 MoveBack();
 
@@ -197,11 +197,11 @@ Serial.print("BACK");
 else if(Data == 'a')
 {
 
-Stop():
+Stop();
 
 delay(10);
 
-MoveUpl):
+MoveUp();
 
 Serial.print("PROK UP\n");
 }
@@ -225,7 +225,9 @@ Stop();
 
 delay(10);
 
-ProkStop():
+ProkStop();
 
 Serial.print("PROK STOP\n");
+}
+}
 }
