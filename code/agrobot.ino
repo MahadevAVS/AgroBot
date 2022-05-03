@@ -133,7 +133,7 @@ if(Serial.available())
 char Data = Serial.read();
 
 
-if(Data == "'F')
+if(Data == 'F')
 {
 
 Serial.print("FORWARD"):
